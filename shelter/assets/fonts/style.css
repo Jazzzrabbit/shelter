@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'georgia-bold';
+  src: url('/fonts/georgia-bold.woff2') format('woff2'),
+       url('/fonts/georgia-bold.woff') format('woff'),
+       url('/fonts/georgia-bold.ttf')  format('truetype');
+}
+
+body {
+  font-family: 'georgia-bold', sans-serif;
+}

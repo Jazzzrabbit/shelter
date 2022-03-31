@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'georgia-regular';
+    src: url('../assets/fonts/georgia-regular.woff2') format('woff2'),
+         url('../assets/fonts/georgia-regular.woff') format('woff'),
+         url('../assets/fonts/georgia-regular.ttf')  format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'georgia-italic';
+    src: url('../assets/fonts/georgia-italic.woff2') format('woff2'),
+         url('../assets/fonts/georgia-italic.woff') format('woff'),
+         url('../assets/fonts/georgia-italic.ttf')  format('truetype');
+    font-weight: 400;    
+    font-style: italic; 
+}
+
+@font-face {
+    font-family: 'georgia-bold';
+    src: url('../assets/fonts/georgia-bold.woff2') format('woff2'),
+         url('../assets/fonts/georgia-bold.woff') format('woff'),
+         url('../assets/fonts/georgia-bold.ttf')  format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'arial-regular';
+    src: url('../assets/fonts/arial-regular.woff2') format('woff2'),
+         url('../assets/fonts/arial-regular.woff') format('woff'),
+         url('../assets/fonts/arial-regular.ttf')  format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'arial-italic';
+    src: url('../assets/fonts/arial-italic.woff2') format('woff2'),
+         url('../assets/fonts/arial-italic.woff') format('woff'),
+         url('../assets/fonts/arial-italic.ttf')  format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* @import 'normalize.css'; */
+
+body {
+    font-family: 'georgia-italic'; 
+    /* font-family: 'arial-italic', sans-serif;
+    /* font-family: 'georgia-italic', sans-serif; */
+}
+
+.orig {
+    font-family: 'georgia-bold', sans-serif;
+    font-weight: 700;
+}
+
+.test {
+    font-family: 'georgia-regular', sans-serif;
+    font-weight: 400;
+}
+
+.test2 {
+    font-family: 'arial-italic', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+  
+  
+  
+ 
