@@ -60,7 +60,7 @@ a {
     background-image: url(../../assets/images/main/header_bg_grad.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
     background-position: top center;
     background-repeat: no-repeat;
-    height: 908px;
+    height: 912px;
 }
 
 .header__top {
@@ -254,6 +254,150 @@ a {
     content: url(../../assets/images/main/icon_marker.svg);
     top: 0;
     left: -43px;
+}
+
+.about {
+    max-height: 588px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.about__wrapper {
+    display: flex;
+    max-height: 408px;
+}
+
+.about__image {
+    margin-left: 175px;
+}
+
+.about__content {
+    width: 430px;
+    margin: -25px 120px;
+}
+
+.about__title {
+    font-family: 'georgia-regular';
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 2px;
+    color: #545454;
+    width: 370px;
+}
+
+.about__text {
+    font-family: 'arial-regular';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #4C4C4C;
+}
+
+.top__text {
+    display: inline-block;
+    margin-top: -10px;
+}
+
+.friends {
+    height: 697px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    font-family: 'georgia-regular';
+    font-weight: 400;
+}
+
+.friends__title {
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 2px;
+    color: #545454;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.slider__wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 990px;
+    margin: 0 auto;
+    padding-bottom: 90px;
+    position: relative;
+}
+
+.slider__wrapper::before {
+    position: absolute;
+    content: url(../../assets/images/main/left_arrow.png);
+    width: 52px;
+    height: 52px;
+    top: 187px;
+    left: -105px;
+}
+
+.slider__wrapper:hover::before {
+    cursor: pointer;
+}
+
+.slider__wrapper:hover::after {
+    cursor: pointer;
+}
+
+.slider__wrapper::after {
+    position: absolute;
+    content: url(../../assets/images/main/right_arrow.png);
+    width: 52px;
+    height: 52px;
+    top: 187px;
+    right: -105px;
+}
+
+.slider__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item__image:hover {
+    cursor: pointer;
+}
+
+.item__name {
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.item__name:hover {
+    cursor: pointer;
+}
+
+.item__button {
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    display: inline-block;
+    width: 110px;
+    padding: 15px 38px;
+    border: 2px solid #F1CDB3;;
+    border-radius: 100px;
+    text-align: center;
+    color: #292929;
+}
+
+.friends__button {
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    color: #292929;
+    border-radius: 100px;
+    background-color: #F1CDB3;
+    padding: 15px 48px;
+    display: inline-block;
+    margin: 0 466px;
+    text-align: center;
 }
 
 
