@@ -55,14 +55,35 @@ a {
 
 .header {
     max-height: 120px;
-    margin-top: 28px;
-    margin-bottom: 80px;
+    margin-top: 15px;
+    margin-bottom: 67px;
 }
 
 .header__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header__logo-title {
+    font-family: 'georgia-regular';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 34px;
+    letter-spacing: 2px;
+    color: #545454;
+    margin: 14px 0;
+    padding: 0;
+}
+
+.header__logo-subtitle {
+    font-family: 'arial-regular';
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 1.3px;
+    color: #292929;
+    margin-left: 4px;
 }
 
 .menu__link {
@@ -107,7 +128,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 9px;
     width: 270px;
     height: 435px;
     background-color: #FAFAFA;
@@ -118,7 +139,7 @@ a {
     cursor: pointer;
     box-shadow: 0px 4px 4px 0px #00000040;
     background-color: #FFFFFF;
-    gap: 9px;
+    gap: 10px;
     transition: .3s;
 }
 
@@ -133,7 +154,7 @@ a {
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;
-    letter-spacing: 2px;
+    letter-spacing: 1.4px;
     color: #545454;
 }
 
@@ -141,14 +162,14 @@ a {
     font-family: 'georgia-regular';
     font-weight: 400;
     font-size: 17px;
-    line-height: 22px;
+    line-height: 21px;
     letter-spacing: 1px;
     color: #292929;
     border: 2px solid #F1CDB3;
     border-radius: 100px;
-    width: 195px;
+    width: 191px;
     height: 52px;
-    padding: 15px 45px;
+    padding: 15px 44px;
 }
 
 .slider__nav {
@@ -215,7 +236,7 @@ a {
     line-height: 45px;
     letter-spacing: 2px;
     color: #FFFFFF;
-    margin-top: 20px;
+    margin-top: 17px;
 }
 
 .qa__email {
@@ -223,17 +244,17 @@ a {
     line-height: 23px;
     letter-spacing: 1.4px;
     color: #F1CDB3;
-    margin-bottom: 45px;
+    margin-bottom: 49px;
     position: relative;
-    left: 57px;
-    padding-top: 5px;
+    left: 59px;
+    padding-top: 9px;
 }
 
 .qa__email::before {
     position: absolute;
     content: url(../../assets/icons/icon_email.svg); 
-    top: 0;
-    left: -57px;
+    top: 3px;
+    left: -59px;
 }
 
 .qa__phone {
@@ -242,14 +263,14 @@ a {
     letter-spacing: 1.4px;
     color: #F1CDB3;
     position: relative;
-    left: 57px;
+    left: 59px;
 }
 
 .qa__phone::before {
     position: absolute;
     content: url(../../assets/icons/icon_phone.svg);
-    top: 0;
-    left: -57px;
+    top: -6px;
+    left: -59px;
 }
 
 .footer__visit {
@@ -266,40 +287,41 @@ a {
     line-height: 45px;
     letter-spacing: 2px;
     color: #FFFFFF;
-    margin-top: 20px;
+    margin-top: 18px;
+    margin-left: -4px;
 }
 
 .visit__entrance {
     font-size: 20px;
     line-height: 23px;
-    letter-spacing: 1px;
+    letter-spacing: 1.1px;
     color: #F1CDB3;
     position: relative;
-    left: 43px;
-    padding-bottom: 35px;
+    left: 39px;
+    padding-bottom: 37px;
     margin-top: -5px;
 }
 
 .visit__entrance::before {
     position: absolute;
     content: url(../../assets/icons/icon_marker.svg);
-    top: 2px;
-    left: -47px;
+    top: 6px;
+    left: -44px;
 }
 
 .visit__address {
     font-size: 20px;
     line-height: 23px;
-    letter-spacing: 1px;
+    letter-spacing: 1.1px;
     color: #F1CDB3;
     position: relative;
-    left: 43px;
+    left: 39px;
 }
 
 .visit__address::before {
     position: absolute;
     content: url(../../assets/icons/icon_marker.svg);
-    top: -2px;
-    left: -47px;
+    top: -3px;
+    left: -44px;
 }
 

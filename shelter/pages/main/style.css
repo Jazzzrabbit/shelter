@@ -68,8 +68,29 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 54px;
+    padding-bottom: 51px;
+}
+
+.header__logo-title {
+    font-family: 'georgia-regular';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 34px;
+    letter-spacing: 2px;
+    color: #F1CDB3;
+    margin: 4px 0;
+    padding: 0;
+}
+
+.header__logo-subtitle {
+    font-family: 'arial-regular';
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 1.4px;
+    color: #FFFFFF;
+    margin-left: 3px;
 }
 
 .header__menu {
@@ -113,7 +134,7 @@ a {
     width: 310px;
     height: 114px;
     margin-top: 163px;
-    margin-bottom: 42px;
+    margin-bottom: 40px;
 }
 
 .header__text {
@@ -122,7 +143,7 @@ a {
     font-size: 15px;
     line-height: 24px;
     color: #CDCDCD;
-    padding-bottom: 22px;
+    padding-bottom: 24px;
 }
 
 .header__button {
@@ -185,6 +206,7 @@ a {
 .top__text {
     display: inline-block;
     margin-top: -10px;
+    margin-bottom: 10px;
 }
 
 .friends {
@@ -393,7 +415,7 @@ a {
     font-family: 'georgia-regular';
     font-weight: 400;
     font-size: 35px;
-    letter-spacing: 2px;
+    letter-spacing: 2.2px;
     max-width: 300px;
     color: #545454;
     margin: 0 0 20px;
@@ -405,26 +427,27 @@ a {
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 1px;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 }
 
 .donation__acc {
     font-family: 'georgia-regular';
     font-weight: 400;
     display: inline-block;
-    width: 349px;
+    width: 350px;
     height: 43px;
     border-radius: 9px;
     background-color: #F1CDB3;
     color: #545454;
     font-size: 20px;
     line-height: 23px;
-    letter-spacing: 1px;
+    letter-spacing: 1.1px;
     text-align: center;
     align-items: center;
     border: none;
     padding: 10px 15px 10px 62px;
     position: relative;
+    margin-bottom: 6px;
 }
 
 .donation__acc::before {
@@ -487,17 +510,17 @@ a {
     line-height: 23px;
     letter-spacing: 1.4px;
     color: #F1CDB3;
-    margin-bottom: 45px;
+    margin-bottom: 48px;
     position: relative;
-    left: 57px;
+    left: 59px;
     padding-top: 9px;
 }
 
 .qa__email::before {
     position: absolute;
     content: url(../../assets/icons/icon_email.svg); 
-    top: 0;
-    left: -57px;
+    top: 3px;
+    left: -59px;
 }
 
 .qa__phone {
@@ -506,14 +529,14 @@ a {
     letter-spacing: 1.4px;
     color: #F1CDB3;
     position: relative;
-    left: 57px;
+    left: 58px;
 }
 
 .qa__phone::before {
     position: absolute;
     content: url(../../assets/icons/icon_phone.svg);
-    top: 0;
-    left: -57px;
+    top: -5px;
+    left: -58px;
 }
 
 .footer__visit {
@@ -535,29 +558,31 @@ a {
     letter-spacing: 2px;
     color: #FFFFFF;
     margin-top: 20px;
+    margin-left: -5px;
 }
 
 .visit__entrance {
     font-size: 20px;
     line-height: 23px;
-    letter-spacing: 1px;
+    letter-spacing: 1.1px;
     color: #F1CDB3;
     position: relative;
     left: 39px;
-    padding-bottom: 33px;
+    margin-top: -3px;
+    padding-bottom: 36px;
 }
 
 .visit__entrance::before {
     position: absolute;
     content: url(../../assets/icons/icon_marker.svg);
-    top: 2px;
-    left: -43px;
+    top: 5px;
+    left: -44px;
 }
 
 .visit__address {
     font-size: 20px;
     line-height: 23px;
-    letter-spacing: 1px;
+    letter-spacing: 1.1px;
     color: #F1CDB3;
     position: relative;
     left: 39px;
@@ -566,8 +591,8 @@ a {
 .visit__address::before {
     position: absolute;
     content: url(../../assets/icons/icon_marker.svg);
-    top: -2px;
-    left: -43px;
+    top: -4px;
+    left: -44px;
 }
 
 
