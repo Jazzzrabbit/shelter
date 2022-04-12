@@ -172,6 +172,11 @@ a {
     transition: 0.2s;
 }
 
+.main {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 .about {
     height: 588px;
 }
