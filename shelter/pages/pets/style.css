@@ -56,7 +56,6 @@ a {
 .header {
     max-height: 120px;
     margin-top: 15px;
-    margin-bottom: 67px;
 }
 
 .header__wrapper {
@@ -107,11 +106,12 @@ a {
 
 .main {
     margin-bottom: 100px;
+    background-color: #F6F6F6;
+    text-align: center;
 }
 
 .main__title {
     max-width: 400px;
-    margin: 0 auto;
     font-family: 'georgia-regular';
     font-weight: 400;
     font-size: 35px;
@@ -119,12 +119,9 @@ a {
     letter-spacing: 2px;
     color: #545454;
     text-align: center;
-    padding-top: 30px;
+    margin-top: 96px;
     margin-bottom: 60px;
-}
-
-.main__slider {
-    background-color: #F6F6F6;
+    display: inline-block;
 }
 
 .slider__wrapper {

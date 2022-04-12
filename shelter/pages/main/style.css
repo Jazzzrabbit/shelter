@@ -61,7 +61,6 @@ a {
     background-position: top center;
     background-repeat: no-repeat;
     height: 912px;
-    margin-bottom: 80px;
 }
 
 .header__top {
@@ -174,8 +173,7 @@ a {
 }
 
 .about {
-    max-height: 588px;
-    margin-bottom: 180px;
+    height: 588px;
 }
 
 .about__wrapper {
@@ -184,12 +182,13 @@ a {
 }
 
 .about__image {
+    margin-top: 75px;
     margin-left: 175px;
 }
 
 .about__content {
     width: 430px;
-    margin: -25px 120px;
+    margin: 55px 120px;
 }
 
 .about__title {
@@ -223,6 +222,10 @@ a {
     font-weight: 400;
 }
 
+.friends__wrapper {
+    text-align: center;
+}
+
 .friends__title {
     font-family: 'georgia-regular';
     font-weight: 400;
@@ -230,9 +233,10 @@ a {
     line-height: 45px;
     letter-spacing: 2px;
     color: #545454;
-    margin: 0 auto;
-    text-align: center;
-    padding-bottom: 60px;
+    margin-top: 80px;
+    display: inline-block;
+    width: 400px;
+    margin-bottom: 60px;
 }
 
 .slider__wrapper {
@@ -240,7 +244,7 @@ a {
     justify-content: space-between;
     max-width: 990px;
     margin: 0 auto;
-    padding-bottom: 56px;
+    margin-bottom: 56px;
     position: relative;
 }
 
@@ -343,7 +347,6 @@ a {
     background-color: #F1CDB3;
     padding: 15px 48px;
     display: inline-block;
-    margin: 0 466px;
     text-align: center;
 }
 
@@ -353,8 +356,8 @@ a {
 }
 
 .help {
-    height: 431px;
-    margin-bottom: 95px;
+    height: 611px;
+    text-align: center;
 }
 
 .help__title {
@@ -363,12 +366,14 @@ a {
     font-size: 35px;
     line-height: 45px;
     letter-spacing: 2px;
-    padding-bottom: 60px;
     max-width: 328px;
     text-align: center;
-    margin: 0 auto;
     color: #545454;
+    display: inline-block;
+    margin-top: 80px;
+    margin-bottom: 60px;
 }
+
 
 .help__content-top {
     max-width: 1026px;
@@ -436,7 +441,7 @@ a {
     letter-spacing: 2.2px;
     max-width: 300px;
     color: #545454;
-    margin: 2px 0 25px;
+    margin: -3px 0 25px;
     padding: 0;
 }
 
@@ -505,7 +510,7 @@ a {
 .footer__wrapper {
     display: flex;
     justify-content: space-between;
-    padding-top: 40px;
+    padding-top: 34px;
 }
 
 .footer__qa {
