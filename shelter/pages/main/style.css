@@ -109,10 +109,17 @@ a {
     font-weight: 400;
     font-size: 15px;
     line-height: 27px;
+    color: #CDCDCD;
+}
+
+.menu__link:hover {
+    color: #FAFAFA;
+    transition: .3s;
 }
 
 .menu__link-active {
     border-bottom: 3px solid #F1CDB3;
+    color: #FAFAFA;
 }
 
 .header__main {
@@ -210,6 +217,7 @@ a {
 }
 
 .friends {
+    background-color: #F6F6F6;
     max-height: 697px;
     margin-bottom: 182px;
     font-family: 'georgia-regular';
@@ -217,6 +225,8 @@ a {
 }
 
 .friends__title {
+    font-family: 'georgia-regular';
+    font-weight: 400;
     font-size: 35px;
     line-height: 45px;
     letter-spacing: 2px;
@@ -336,6 +346,11 @@ a {
     text-align: center;
 }
 
+.friends__button:hover {
+    background-color: #FDDCC4;
+    transition: .3s;
+}
+
 .help {
     max-height: 431px;
     margin-bottom: 184px;
@@ -393,6 +408,7 @@ a {
 }
 
 .donation {
+    background-color: #F6F6F6;
     max-height: 462px;
     margin-bottom: 92px;   
 }
@@ -461,6 +477,8 @@ a {
 
 .donation__acc:hover {
     cursor: pointer;
+    background-color: #FDDCC4;
+    transition: .3s;
 }
 
 .donation__text {
@@ -498,6 +516,8 @@ a {
 }
 
 .qa__title {
+    font-family: 'georgia-regular';
+    font-weight: 400;
     font-size: 35px;
     line-height: 45px;
     letter-spacing: 2px;
@@ -506,6 +526,8 @@ a {
 }
 
 .qa__email {
+    font-family: 'georgia-regular';
+    font-weight: 400;
     font-size: 20px;
     line-height: 23px;
     letter-spacing: 1.4px;
@@ -524,6 +546,8 @@ a {
 }
 
 .qa__phone {
+    font-family: 'georgia-regular';
+    font-weight: 400;
     font-size: 20px;
     line-height: 23px;
     letter-spacing: 1.4px;
@@ -553,6 +577,8 @@ a {
 }
 
 .visit__title {
+    font-family: 'georgia-regular';
+    font-weight: 400;
     font-size: 35px;
     line-height: 45px;
     letter-spacing: 2px;
@@ -562,6 +588,8 @@ a {
 }
 
 .visit__entrance {
+    font-family: 'georgia-regular';
+    font-weight: 400;
     font-size: 20px;
     line-height: 23px;
     letter-spacing: 1.1px;
@@ -580,6 +608,8 @@ a {
 }
 
 .visit__address {
+    font-family: 'georgia-regular';
+    font-weight: 400;
     font-size: 20px;
     line-height: 23px;
     letter-spacing: 1.1px;

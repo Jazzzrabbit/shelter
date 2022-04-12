@@ -93,6 +93,12 @@ a {
     line-height: 24px;
     color: #545454;
     margin-left: 32px;
+    color: #545454;
+}
+
+.menu__link:hover {
+    color: #292929;
+    transition: .3s;
 }
 
 .menu__link_active {
@@ -115,6 +121,10 @@ a {
     text-align: center;
     padding-top: 30px;
     margin-bottom: 60px;
+}
+
+.main__slider {
+    background-color: #F6F6F6;
 }
 
 .slider__wrapper {
@@ -204,6 +214,9 @@ a {
 
 .slider__button-right:hover {
     cursor: pointer;
+    background-color: #FDDCC4;
+    border: hidden;
+    transition: .3s;
 }
 
 .footer {
@@ -232,6 +245,8 @@ a {
 }
 
 .qa__title {
+    font-family: 'georgia-regular';
+    font-weight: 400;
     font-size: 35px;
     line-height: 45px;
     letter-spacing: 2px;
@@ -283,6 +298,8 @@ a {
 }
 
 .visit__title {
+    font-family: 'georgia-regular';
+    font-weight: 400;
     font-size: 35px;
     line-height: 45px;
     letter-spacing: 2px;
