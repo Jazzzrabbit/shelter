@@ -254,6 +254,7 @@ a {
     left: -105px;
     border: 2px solid #F1CDB3;
     border-radius: 100px;
+    background-color: transparent;
 }
 
 .friends__left-arrow:hover {
@@ -272,6 +273,7 @@ a {
     right: -105px;
     border: 2px solid #F1CDB3;
     border-radius: 100px;
+    background-color: transparent;
 }
 
 .friends__right-arrow:hover {
@@ -353,7 +355,7 @@ a {
 
 .help {
     max-height: 431px;
-    margin-bottom: 184px;
+    margin-bottom: 100px;
 }
 
 .help__title {
@@ -409,8 +411,7 @@ a {
 
 .donation {
     background-color: #F6F6F6;
-    max-height: 462px;
-    margin-bottom: 92px;   
+    height: 462px;
 }
 
 .donation__wrapper {
@@ -418,6 +419,7 @@ a {
 }
 
 .donation__image {
+    margin-top: 84px;
     margin-left: 145px;
 }
 
@@ -425,6 +427,7 @@ a {
     max-width: 380px;
     max-height: 282px;
     margin-left: 28px;
+    margin-top: 84px;
 }
 
 .donation__title {
