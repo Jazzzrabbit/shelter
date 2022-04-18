@@ -615,6 +615,7 @@ a {
 
 .footer__image {
     display: block;
+    margin-top: 6px;
 }
 
 .visit__title {
@@ -788,6 +789,12 @@ a {
         width: 380px;
         margin: 85px auto;
     }
+    .donation__bank {
+        margin-bottom: 15px;
+    }
+    .donation__acc::before {
+        top: 9px;
+    }
     .donation__image {
         margin-top: -30px;
         margin-left: 130px;
@@ -797,12 +804,44 @@ a {
         width: 768px;
         background-size: cover;
     }
+    .qa__title {
+        letter-spacing: 2.2px;
+    }
+    .qa__email {
+        left: 62px;
+        letter-spacing: 1.2px;
+    }
+    .qa__phone {
+        left: 61px;
+    }
+    .visit__title {
+        margin-left: 0;
+    }
+    .visit__entrance {
+        left: 40px;
+        letter-spacing: 1.2px;
+        padding: 0;
+        margin-bottom: 37px;
+    }
+    .visit__entrance::before {
+        top: 7px;
+        left: -42px;
+    }
+    .visit__address {
+        letter-spacing: 1.2px;
+    }
+    .visit__entrance::before {
+        left: -42px;
+    }
     .footer__wrapper {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         gap: 71px 55px;
         padding: 10px;
+    }
+    .footer__image {
+        margin: 0;
     }
 }
 
@@ -1038,7 +1077,7 @@ a {
         left: 44px;
     }
     .footer__image {
-        margin-top: 43px;
+        margin-top: 44px;
     }
     .footer__image img {
         width: 260px;

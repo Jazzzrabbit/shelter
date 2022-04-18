@@ -420,8 +420,46 @@ a {
     .footer__wrapper {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 70px 55px;
+        gap: 55px;
         padding: 15px 0 0;
+    }
+    .visit__title {
+        margin: 15px 0 38px;
+    }
+    .visit__entrance {
+        padding: 0;
+        margin-bottom: 40px;
+        letter-spacing: 1.2px;
+    }
+    .visit__entrance::before {
+        left: -42px;
+    }
+    .visit__address {
+        letter-spacing: 1.2px;
+    }
+    .visit__address::before {
+        top: -6px;
+        left: -42px;
+    }
+    .qa__title {
+        margin: 15px 0 45px;
+        letter-spacing: 2.2px;
+    }
+    .qa__email {
+        padding: 0;
+        left: 61px;
+    }
+    .qa__email::before {
+        top: -5px;
+    }
+    .qa__phone {
+        left: 60px;
+    }
+    .qa__phone::before {
+        top: -5px;
+    }
+    .footer__image {
+        margin-top: 12px;
     }
 }
 
@@ -522,6 +560,9 @@ a {
     .visit__address::before {
         top: -5px;
         left: -5px;
+    }
+    .footer__image {
+        margin: 0;
     }
     .footer__image img {
         width: 260px;
