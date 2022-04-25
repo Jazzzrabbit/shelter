@@ -316,10 +316,10 @@ let offset1 = 0;
 let offset2 = 0;
 
 leftArrow.addEventListener('click', () => {
-  document.querySelector('.slider__item-box').style.left = offset1*width - width +'px'
-
-  if (offset1 + 1 <= 1) offset1++;
-  else offset1 = 0;
+  document.querySelector('.slider__item-box').style.left = offset2*-width  -width-width  + `px`;
+  
+  if (offset2 + 1 < 3) offset2++;
+  else offset2 = 0;
 });
 
 
