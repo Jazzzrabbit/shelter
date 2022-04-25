@@ -29,7 +29,7 @@ if (windowSize >= 768 && windowSize < 1280) {
   width = 580;
 };
 if (windowSize >= 320 && windowSize < 768) {
-  width = 270;
+  width = 680;
 };
 
 const pets = [
