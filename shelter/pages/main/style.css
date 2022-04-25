@@ -51,6 +51,13 @@ a {
     color: #CDCDCD;
 }
 
+.noscroll {
+    overflow-y: hidden;
+}
+.scroll {
+    overflow-y: auto;
+}
+
 .container {
     width: 1200px;
     margin: 0 auto;
@@ -59,8 +66,8 @@ a {
 .header {
     max-width: 1280px;
     margin: 0 auto;
-    background: url(../../assets/images/main/header_bg.jpg);
-    background-image: url(../../assets/images/main/header_bg_grad.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+    background: url(../../assets/images/header_bg.jpg);
+    background-image: url(../../assets/images/header_bg_grad.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
     background-position: top center;
     background-repeat: no-repeat;
     height: 912px;
@@ -102,6 +109,60 @@ a {
     height: 22px;
     background-color: transparent;
     cursor: pointer;
+}
+
+.burger__logo--active {
+    width: 184px;
+}
+
+.burger__header {
+    display: none;
+    padding: 30px 53px 0 10px;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.header__burger--active {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    top: 25px;
+    transition: ease .3s;
+}
+
+.header__burger--active::before,
+.header__burger--active::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    left: 0;
+    background-color: #F1CDB3;
+    transform: rotate(90deg);
+}
+
+.burger__line--active {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 13px;
+    background-color: #F1CDB3;
+    transform: rotate(90deg);
+}
+
+.header__burger--active::before{
+    top: 13px;
+    left: -10px;
+}
+
+.header__burger--active::after {
+    top: 13px;
+    left: 10px;
 }
 
 .burger__line {
@@ -159,6 +220,23 @@ a {
     border-bottom: 3px solid #F1CDB3;
     color: #FAFAFA;
     padding-bottom: 5px;
+}
+
+.menu__shadow {
+    opacity: 0;
+    position: fixed;
+    background-color: rgba(41, 41, 41, 0.6);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    transition: all ease 2s;
+}
+.menu__shadow--active {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 .header__main {
@@ -339,6 +417,7 @@ a {
     width: 270px;
     height: 435px;
     border-radius: 9px;
+    pointer-events: all;
 }
 
 .slider__item:hover {
@@ -398,6 +477,133 @@ a {
 .friends__button:hover {
     background-color: #FDDCC4;
     transition: .3s;
+}
+
+.friends__popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1280px;
+    height: 100vh;
+}
+
+.popup--active {
+    display: block;
+}
+
+.popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.popup__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    max-height: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FAFAFA;
+    border-radius: 9px;
+    position: fixed;
+    z-index: 999;
+}
+
+.popup__close {
+    position: absolute;
+    background-image: url(../../assets/icons/cross.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    border-radius: 50%;
+    background-color: transparent;
+    top: -50px;
+    right: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.popup__image-item {
+    width: 500px;
+    max-height: 500px;
+    display: block;
+}
+
+.popup__title {
+    font-family: 'georgia-regular';
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 2px;
+    margin: 50px auto 10px 30px;
+}
+
+.popup__subtitle {
+    font-family: 'georgia-regular';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    margin: 0 auto 40px 30px;
+}
+
+.popup__text {
+    font-family: 'georgia-regular';
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin: 0 20px 40px 30px;
+}
+
+.popup__list {
+    padding: 0;
+    margin: 0 0 0 44px;
+}
+
+.popup__list-item {
+    font-family: 'georgia-regular';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    display: block;
+    position: relative;
+}
+
+.popup__list-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.popup__list-item::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 4px;
+    background-color: #F1CDB3;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -15px;
+}
+
+.popup__list-item span {
+    font-weight: 700;
 }
 
 .help {
@@ -532,8 +738,8 @@ a {
 }
 
 .footer {
-    background: url(../../assets/images/main/footer-bg.jpg);
-    background-image: url(../../assets/images/main/footer_bg_grad.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
+    background: url(../../assets/images/footer-bg.jpg);
+    background-image: url(../../assets/images/footer_bg_grad.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
     background-position: top center;
     background-repeat: no-repeat;
     max-width: 1280px;
@@ -762,6 +968,37 @@ a {
     .slider__item:nth-child(3) {
         display: none;
     }
+    .friends__popup {
+        width: 768px;
+    }
+    .popup__wrapper {
+        width: 630px;      
+    }
+    .popup__image-item {
+        width: 350px;
+        height: 350px;
+    }
+    .popup__title {
+        margin: 10px auto 10px 11px;
+    }
+    
+    .popup__subtitle {
+        margin: 0 auto 20px 11px;
+    }
+    
+    .popup__text {
+        margin: 0 auto 20px 11px;
+    }
+    
+    .popup__list {
+        margin: 0 0 0 25px;
+    }
+    .popup__list-item:not(:last-child) {
+        margin-bottom: 6px;
+    }
+    .popup__list-item::before {
+        left: -14px;
+    }
     .help {
         height: 779px;
     }
@@ -854,6 +1091,12 @@ a {
         height: 823px;
         background-size: cover;
     }
+    .visible {
+        visibility: hidden;
+    }
+    .burger__header {
+        display: flex;
+    }
     .header__logo-title {
         margin: 5px 0 10px -20px;
         line-height: 33px;
@@ -864,9 +1107,45 @@ a {
     .header__burger {
         display: block;
         margin: -10px 23px 0;
+        transition: ease .3s;
+    }
+    .active-burger {
+        transform: rotate(90deg);
+    }
+    .inactive-burger {
+        transform: rotate(90deg);
     }
     .header__menu {
-        display: none;
+        position: fixed;
+        right: -1000px;
+        top: 0;
+        background-color: #292929;
+        z-index: 999;
+        width: 320px;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 150px;
+        transition: ease-in-out 1.5s;
+    }
+    .active {
+        right: 0;
+    }
+    .menu__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .menu__item {
+        margin: 0;
+        padding: 0;
+    }
+    .menu__item {
+        margin-bottom: 40px;
+    }
+    .menu__link {
+        font-size: 30px;
     }
     .header__main {
         width: 300px;
@@ -963,6 +1242,36 @@ a {
     }
     .friends__button {
         margin-top: 110px;
+    }
+    .friends__popup {
+        width: 320px;
+    }
+    .popup__wrapper {
+        width: 240px;    
+    }
+    .popup__close {
+        right: -30px;
+    }
+    .popup__image-item {
+        display: none;
+    }
+    .popup__title {
+        margin: 10px 39px 10px;
+    }
+    .popup__subtitle {
+        margin: 0 34px 20px;
+    }  
+    .popup__text {
+        margin: 0 10px 24px 10px;
+    }   
+    .popup__list {
+        margin: 0 0 0 25px;
+    }
+    .popup__list-item:not(:last-child) {
+        margin-bottom: 5px;
+    }
+    .popup__list-item::before {
+        left: -12px;
     }
     .help {
         height: 745px;
