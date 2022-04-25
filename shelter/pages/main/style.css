@@ -347,6 +347,7 @@ a {
 
 .friends__wrapper {
     text-align: center;
+    position: relative;
 }
 
 .friends__title {
@@ -366,6 +367,7 @@ a {
     display: flex;
     justify-content: space-between;
     max-width: 990px;
+    overflow: hidden;
     margin: 0 auto;
     margin-bottom: 56px;
     position: relative;
@@ -376,8 +378,8 @@ a {
     content: none;
     width: 52px;
     height: 52px;
-    top: 187px;
-    left: -105px;
+    top: 417px;
+    left: 7px;
     border: 2px solid #F1CDB3;
     border-radius: 100px;
     background-color: transparent;
@@ -395,8 +397,8 @@ a {
     content: none;
     width: 52px;
     height: 52px;
-    top: 187px;
-    right: -105px;
+    top: 417px;
+    right: -7px;
     border: 2px solid #F1CDB3;
     border-radius: 100px;
     background-color: transparent;
@@ -407,6 +409,33 @@ a {
     background-color: #FDDCC4;
     border: hidden;
     transition: 0.3s;
+}
+
+.slider__item-box {
+    position: relative;
+    display: flex;
+    left: -990px;
+    right: 0;
+    gap: 80px;
+    transition: all ease 2s;
+}
+
+.slider__item-box2 {
+    position: relative;
+    display: flex;
+    left: 990px;
+    right: 0;
+    gap: 80px;
+    transition: all ease 2s;
+}
+
+.slider__item-box3 {
+    position: relative;
+    display: flex;
+    left: -990px;
+    right: 0;
+    gap: 80px;
+    transition: all ease 2s;
 }
 
 .slider__item {
@@ -961,9 +990,9 @@ a {
     .friends__right-arrow {
         right: -65px;
     }
-    .slider__wrapper {
-        margin-left: 65px;
-        margin-right: 65px;
+    .slider__item-box {
+        max-width: 580px;
+        
     }
     .slider__item:nth-child(3) {
         display: none;
@@ -1225,19 +1254,19 @@ a {
         width: 300px;
         letter-spacing: 1.4px;
     }
-    .slider__wrapper {
-        margin: 0;
-        justify-content: center;
+    .slider__item-box {
+        max-width: 270px;
+        gap: 70px;
     }
     .slider__item:nth-child(2) {
         display: none;
     }
     .friends__left-arrow {
-        top: 451px;
+        top: 601px;
         left: 67px;
     }
     .friends__right-arrow {
-        top: 451px;
+        top: 601px;
         right: 67px;
     }
     .friends__button {

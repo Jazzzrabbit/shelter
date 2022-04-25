@@ -17,6 +17,20 @@ const popupDiseases    = document.querySelector('#diseases');
 const popupParasites    = document.querySelector('#parasites');
 const overlay     = document.querySelector('#overlay');
 const popupShut = document.querySelector('.popup__close');
+const leftArrow = document.querySelector('#left__arrow');
+const rightArrow = document.querySelector('#right__arrow');
+
+let windowSize = window.innerWidth;
+let width;
+if (windowSize >= 1280) {
+  width = 990;
+};
+if (windowSize >= 768 && windowSize < 1280) {
+  width = 580;
+};
+if (windowSize >= 320 && windowSize < 768) {
+  width = 270;
+};
 
 const pets = [
     {
@@ -106,6 +120,94 @@ const pets = [
       "inoculations": ["bordetella bronchiseptica", "leptospirosis"],
       "diseases": ["deafness", "blindness"],
       "parasites": ["lice", "fleas"]
+    },
+    {
+      "name": "Timmy",
+      "img": "../../assets/images/timmy.png",
+      "type": "Cat",
+      "breed": "British Shorthair",
+      "description": "Timmy is an adorable grey british shorthair male. He loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. Timmy has a lot to say and wants a person to share his thoughts with.",
+      "age": "2 years 3 months",
+      "inoculations": ["calicivirus", "viral rhinotracheitis"],
+      "diseases": ["kidney stones"],
+      "parasites": ["none"]
+    },
+    {
+      "name": "Freddie",
+      "img": "../../assets/images/freddie.png",
+      "type": "Cat",
+      "breed": "British Shorthair",
+      "description": "Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",
+      "age": "2 months",
+      "inoculations": ["rabies"],
+      "diseases": ["none"],
+      "parasites": ["none"]
+    },
+    {
+      "name": "Scarlett",
+      "img": "../../assets/images/scarlett.png",
+      "type": "Dog",
+      "breed": "Jack Russell Terrier",
+      "description": "Scarlett is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.",
+      "age": "3 months",
+      "inoculations": ["parainfluenza"],
+      "diseases": ["none"],
+      "parasites": ["none"]
+    },
+    {
+      "name": "Jennifer",
+      "img": "../../assets/images/jennifer.png",
+      "type": "Dog",
+      "breed": "Labrador",
+      "description": "Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.",
+      "age": "2 months",
+      "inoculations": ["none"],
+      "diseases": ["none"],
+      "parasites": ["none"]
+    },
+    {
+      "name": "Freddie",
+      "img": "../../assets/images/freddie.png",
+      "type": "Cat",
+      "breed": "British Shorthair",
+      "description": "Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",
+      "age": "2 months",
+      "inoculations": ["rabies"],
+      "diseases": ["none"],
+      "parasites": ["none"]
+    },
+    {
+      "name": "Charly",
+      "img": "../../assets/images/charly.png",
+      "type": "Dog",
+      "breed": "Jack Russell Terrier",
+      "description": "This cute boy, Charly, is three years old and he likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
+      "age": "8 years",
+      "inoculations": ["bordetella bronchiseptica", "leptospirosis"],
+      "diseases": ["deafness", "blindness"],
+      "parasites": ["lice", "fleas"]
+    },
+    {
+      "name": "Katrine",
+      "img": "../../assets/images/katrine.png",
+      "type": "Cat",
+      "breed": "British Shorthair",
+      "description": "Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.",
+      "age": "6 months",
+      "inoculations": ["panleukopenia"],
+      "diseases": ["none"],
+      "parasites": ["none"]
+    },
+    {
+      "name": "Timmy",
+      "img": "../../assets/images/timmy.png",
+      "type": "Cat",
+      "breed": "British Shorthair",
+      "description": "Timmy is an adorable grey british shorthair male. He loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. Timmy has a lot to say and wants a person to share his thoughts with.",
+      "age": "2 years 3 months",
+      "inoculations": ["calicivirus", "viral rhinotracheitis"],
+      "diseases": ["kidney stones"],
+      "parasites": ["none"]
     }
 ];
 
@@ -162,7 +264,27 @@ shadow.addEventListener('click', () => {
 menuList.addEventListener('click', () => {
     menuClose();
 });
-console.log(sliderItem);
+
+function mixarr(arr){
+  return arr.map(i => [Math.random(), i]).sort().map(i => i[1]);
+};
+
+function renderItems(num) {
+  let html = "";
+  
+  for (let i = 0; i < pets.length; i++) {
+    html += `<div class="slider__item" id="${pets[i].name}">`;
+    html += `<img class="item__image" src=${pets[i].img} alt="${pets[i].name}">`;
+    html += `<p class="item__name">${pets[i].name}</p>`;
+    html += `<a class="item__button" href="#!">Learn more</a>`;
+    html += `</div>`; 
+  }
+  
+  document.querySelector('#slider__wrapper').innerHTML = `<div class="slider__item-box">${html}</div>`; 
+};
+
+renderItems(1);
+
 for (let i = 0; i < sliderItem.length; i++) {
     sliderItem[i].addEventListener('click', (event) => {
         let petList = {
@@ -183,9 +305,28 @@ for (let i = 0; i < sliderItem.length; i++) {
 };
 
 overlay.addEventListener('click', () => {
-    popupClose();
+  popupClose();
 });
 
 popupShut.addEventListener('click', () => {
   popupClose();
-})
+});
+
+let offset1 = 0;
+let offset2 = 0;
+
+leftArrow.addEventListener('click', () => {
+  document.querySelector('.slider__item-box').style.left = offset1*width - width +'px'
+
+  if (offset1 + 1 <= 1) offset1++;
+  else offset1 = 0;
+});
+
+
+
+rightArrow.addEventListener('click', () => {
+  document.querySelector('.slider__item-box').style.left = offset2*-width  -width-width  + `px`;
+  
+  if (offset2 + 1 < 3) offset2++;
+  else offset2 = 0;
+});
