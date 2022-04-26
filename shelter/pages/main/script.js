@@ -279,12 +279,12 @@ const carousel = document.querySelector('.slider__item-wrapper');
 
 function moveLeft() {
   carousel.classList.add('transition-left');
-  leftArrow.removeEventListener('click');
+  // leftArrow.removeEventListener('click');
 };
 
 function moveRight() {
   carousel.classList.add('transition-right');
-  rightArrow.removeEventListener('click');
+  // rightArrow.removeEventListener('click');
 };
 
 leftArrow.addEventListener('click', moveLeft);
