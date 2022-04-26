@@ -181,9 +181,11 @@ function mixarr(arr){
   return arr.map(i => [Math.random(), i]).sort().map(i => i[1]);
 };
 
-function renderItems() {
+function renderItems(x, y, z) {
   let html = "";
   let arr = mixarr(pets);
+  arr = arr.filter(item => item.name != x && item.name != y && item.name != z);
+  
   for (let i = 0; i < 3; i++) {
     html += `<div class="slider__item" id="${arr[i].name}">`;
     html += `<img class="item__image" src=${arr[i].img} alt="${arr[i].name}">`;
@@ -208,15 +210,6 @@ function renderSideItems() {
   let htmlLeft = '';
   let htmlRight = '';
   
-
-  for (let i= 0; i < 3; i++) {
-    htmlLeft += `<div class="slider__item" id="${arr[i].name}">`;
-    htmlLeft += `<img class="item__image" src=${arr[i].img} alt="${arr[i].name}">`;
-    htmlLeft += `<p class="item__name">${arr[i].name}</p>`;
-    htmlLeft += `<a class="item__button" href="#!">Learn more</a>`;
-    htmlLeft += `</div>`; 
-  }
-  arr = mixarr(pets);
   for (let i= 0; i < 3; i++) {
     html += `<div class="slider__item" id="${arr[i].name}">`;
     html += `<img class="item__image" src=${arr[i].img} alt="${arr[i].name}">`;
@@ -224,7 +217,15 @@ function renderSideItems() {
     html += `<a class="item__button" href="#!">Learn more</a>`;
     html += `</div>`; 
   }
-  arr = mixarr(pets);
+  arr = arr.slice(3);
+  arr = mixarr(arr);
+  for (let i= 0; i < 3; i++) {
+    htmlLeft += `<div class="slider__item" id="${arr[i].name}">`;
+    htmlLeft += `<img class="item__image" src=${arr[i].img} alt="${arr[i].name}">`;
+    htmlLeft += `<p class="item__name">${arr[i].name}</p>`;
+    htmlLeft += `<a class="item__button" href="#!">Learn more</a>`;
+    htmlLeft += `</div>`; 
+  }
   for (let i= 0; i < 3; i++) {
     htmlRight += `<div class="slider__item" id="${arr[i].name}">`;
     htmlRight += `<img class="item__image" src=${arr[i].img} alt="${arr[i].name}">`;
@@ -290,19 +291,32 @@ leftArrow.addEventListener('click', moveLeft);
 rightArrow.addEventListener('click', moveRight);
   
 carousel.addEventListener('animationend', (animation) => {
+  let a, b, c;
+  let regex = new RegExp('id=["][A-Za-z]+', 'g');
+  
   if (animation.animationName == 'move-left') {
     carousel.classList.remove('transition-left');  
     let rightCards = document.querySelector('.slider__item-box-right').innerHTML;
     document.querySelector('.slider__item-box').innerHTML = rightCards;
+    let names = rightCards.match(regex);
+    names = names.map(item => item.slice(4))
+    a = String(names[0]);
+    b = String(names[1]);
+    c = String(names[2]);
     document.querySelector('.slider__item-box-right').innerHTML = '';
-    document.querySelector('.slider__item-box-right').innerHTML = renderItems();
+    document.querySelector('.slider__item-box-right').innerHTML = renderItems(a, b, c);
     addPopupListener();  
   } else {
     carousel.classList.remove('transition-right');
     let leftCards = document.querySelector('.slider__item-box-left').innerHTML;
     document.querySelector('.slider__item-box').innerHTML = leftCards;
+    let names = leftCards.match(regex);
+    names = names.map(item => item.slice(4))
+    a = String(names[0]);
+    b = String(names[1]);
+    c = String(names[2]);
     document.querySelector('.slider__item-box-left').innerHTML = '';
-    document.querySelector('.slider__item-box-left').innerHTML = renderItems();
+    document.querySelector('.slider__item-box-left').innerHTML = renderItems(a, b, c);
     addPopupListener();
   }
   
