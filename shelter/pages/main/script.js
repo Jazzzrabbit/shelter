@@ -120,94 +120,6 @@ const pets = [
       "inoculations": ["bordetella bronchiseptica", "leptospirosis"],
       "diseases": ["deafness", "blindness"],
       "parasites": ["lice", "fleas"]
-    },
-    {
-      "name": "Timmy",
-      "img": "../../assets/images/timmy.png",
-      "type": "Cat",
-      "breed": "British Shorthair",
-      "description": "Timmy is an adorable grey british shorthair male. He loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. Timmy has a lot to say and wants a person to share his thoughts with.",
-      "age": "2 years 3 months",
-      "inoculations": ["calicivirus", "viral rhinotracheitis"],
-      "diseases": ["kidney stones"],
-      "parasites": ["none"]
-    },
-    {
-      "name": "Freddie",
-      "img": "../../assets/images/freddie.png",
-      "type": "Cat",
-      "breed": "British Shorthair",
-      "description": "Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",
-      "age": "2 months",
-      "inoculations": ["rabies"],
-      "diseases": ["none"],
-      "parasites": ["none"]
-    },
-    {
-      "name": "Scarlett",
-      "img": "../../assets/images/scarlett.png",
-      "type": "Dog",
-      "breed": "Jack Russell Terrier",
-      "description": "Scarlett is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.",
-      "age": "3 months",
-      "inoculations": ["parainfluenza"],
-      "diseases": ["none"],
-      "parasites": ["none"]
-    },
-    {
-      "name": "Jennifer",
-      "img": "../../assets/images/jennifer.png",
-      "type": "Dog",
-      "breed": "Labrador",
-      "description": "Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.",
-      "age": "2 months",
-      "inoculations": ["none"],
-      "diseases": ["none"],
-      "parasites": ["none"]
-    },
-    {
-      "name": "Freddie",
-      "img": "../../assets/images/freddie.png",
-      "type": "Cat",
-      "breed": "British Shorthair",
-      "description": "Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",
-      "age": "2 months",
-      "inoculations": ["rabies"],
-      "diseases": ["none"],
-      "parasites": ["none"]
-    },
-    {
-      "name": "Charly",
-      "img": "../../assets/images/charly.png",
-      "type": "Dog",
-      "breed": "Jack Russell Terrier",
-      "description": "This cute boy, Charly, is three years old and he likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
-      "age": "8 years",
-      "inoculations": ["bordetella bronchiseptica", "leptospirosis"],
-      "diseases": ["deafness", "blindness"],
-      "parasites": ["lice", "fleas"]
-    },
-    {
-      "name": "Katrine",
-      "img": "../../assets/images/katrine.png",
-      "type": "Cat",
-      "breed": "British Shorthair",
-      "description": "Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.",
-      "age": "6 months",
-      "inoculations": ["panleukopenia"],
-      "diseases": ["none"],
-      "parasites": ["none"]
-    },
-    {
-      "name": "Timmy",
-      "img": "../../assets/images/timmy.png",
-      "type": "Cat",
-      "breed": "British Shorthair",
-      "description": "Timmy is an adorable grey british shorthair male. He loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. Timmy has a lot to say and wants a person to share his thoughts with.",
-      "age": "2 years 3 months",
-      "inoculations": ["calicivirus", "viral rhinotracheitis"],
-      "diseases": ["kidney stones"],
-      "parasites": ["none"]
     }
 ];
 
@@ -269,23 +181,70 @@ function mixarr(arr){
   return arr.map(i => [Math.random(), i]).sort().map(i => i[1]);
 };
 
-function renderItems(num) {
+function renderItems() {
   let html = "";
-  
-  for (let i = 0; i < pets.length; i++) {
-    html += `<div class="slider__item" id="${pets[i].name}">`;
-    html += `<img class="item__image" src=${pets[i].img} alt="${pets[i].name}">`;
-    html += `<p class="item__name">${pets[i].name}</p>`;
+  let arr = mixarr(pets);
+  for (let i = 0; i < 3; i++) {
+    html += `<div class="slider__item" id="${arr[i].name}">`;
+    html += `<img class="item__image" src=${arr[i].img} alt="${arr[i].name}">`;
+    html += `<p class="item__name">${arr[i].name}</p>`;
     html += `<a class="item__button" href="#!">Learn more</a>`;
     html += `</div>`; 
   }
   
-  document.querySelector('#slider__wrapper').innerHTML = `<div class="slider__item-box">${html}</div>`; 
+  return html; 
 };
 
-renderItems(1);
+function renderSideItems() {
+  let div = document.createElement('div');
+  let divLeft = document.createElement('div');
+  let divRight = document.createElement('div');
+  div.classList.add('slider__item-box');
+  divLeft.classList.add('slider__item-box-left');
+  divRight.classList.add('slider__item-box-right');
 
-for (let i = 0; i < sliderItem.length; i++) {
+  let arr = mixarr(pets);
+  let html = '';
+  let htmlLeft = '';
+  let htmlRight = '';
+  
+
+  for (let i= 0; i < 3; i++) {
+    htmlLeft += `<div class="slider__item" id="${arr[i].name}">`;
+    htmlLeft += `<img class="item__image" src=${arr[i].img} alt="${arr[i].name}">`;
+    htmlLeft += `<p class="item__name">${arr[i].name}</p>`;
+    htmlLeft += `<a class="item__button" href="#!">Learn more</a>`;
+    htmlLeft += `</div>`; 
+  }
+  arr = mixarr(pets);
+  for (let i= 0; i < 3; i++) {
+    html += `<div class="slider__item" id="${arr[i].name}">`;
+    html += `<img class="item__image" src=${arr[i].img} alt="${arr[i].name}">`;
+    html += `<p class="item__name">${arr[i].name}</p>`;
+    html += `<a class="item__button" href="#!">Learn more</a>`;
+    html += `</div>`; 
+  }
+  arr = mixarr(pets);
+  for (let i= 0; i < 3; i++) {
+    htmlRight += `<div class="slider__item" id="${arr[i].name}">`;
+    htmlRight += `<img class="item__image" src=${arr[i].img} alt="${arr[i].name}">`;
+    htmlRight += `<p class="item__name">${arr[i].name}</p>`;
+    htmlRight += `<a class="item__button" href="#!">Learn more</a>`;
+    htmlRight += `</div>`; 
+  }
+
+  div.innerHTML = html;
+  divLeft.innerHTML = htmlLeft;
+  divRight.innerHTML = htmlRight;
+  
+  document.querySelector('#slider__item-wrapper').appendChild(divLeft);
+  document.querySelector('#slider__item-wrapper').appendChild(div);
+  document.querySelector('#slider__item-wrapper').appendChild(divRight);
+}
+
+renderSideItems()
+function addPopupListener() {
+  for (let i = 0; i < sliderItem.length; i++) {
     sliderItem[i].addEventListener('click', (event) => {
         let petList = {
             'Jennifer': 1,
@@ -302,7 +261,10 @@ for (let i = 0; i < sliderItem.length; i++) {
         else name = event.target.parentElement.id;
         popupOpen(petList[name]-1);
     });
+  };
 };
+
+addPopupListener();
 
 overlay.addEventListener('click', () => {
   popupClose();
@@ -312,21 +274,38 @@ popupShut.addEventListener('click', () => {
   popupClose();
 });
 
-let offset1 = 0;
-let offset2 = 0;
+const carousel = document.querySelector('.slider__item-wrapper');
 
-leftArrow.addEventListener('click', () => {
-  document.querySelector('.slider__item-box').style.left = offset2*-width  -width-width  + `px`;
+function moveLeft() {
+  carousel.classList.add('transition-left');
+  leftArrow.removeEventListener('click');
+};
+
+function moveRight() {
+  carousel.classList.add('transition-right');
+  rightArrow.removeEventListener('click');
+};
+
+leftArrow.addEventListener('click', moveLeft);
+rightArrow.addEventListener('click', moveRight);
   
-  if (offset2 + 1 < 3) offset2++;
-  else offset2 = 0;
-});
-
-
-
-rightArrow.addEventListener('click', () => {
-  document.querySelector('.slider__item-box').style.left = offset2*-width  -width-width  + `px`;
+carousel.addEventListener('animationend', (animation) => {
+  if (animation.animationName == 'move-left') {
+    carousel.classList.remove('transition-left');  
+    let rightCards = document.querySelector('.slider__item-box-right').innerHTML;
+    document.querySelector('.slider__item-box').innerHTML = rightCards;
+    document.querySelector('.slider__item-box-right').innerHTML = '';
+    document.querySelector('.slider__item-box-right').innerHTML = renderItems();
+    addPopupListener();  
+  } else {
+    carousel.classList.remove('transition-right');
+    let leftCards = document.querySelector('.slider__item-box-left').innerHTML;
+    document.querySelector('.slider__item-box').innerHTML = leftCards;
+    document.querySelector('.slider__item-box-left').innerHTML = '';
+    document.querySelector('.slider__item-box-left').innerHTML = renderItems();
+    addPopupListener();
+  }
   
-  if (offset2 + 1 < 3) offset2++;
-  else offset2 = 0;
+  leftArrow.addEventListener('click', moveLeft);
+  rightArrow.addEventListener('click', moveRight);
 });
