@@ -304,7 +304,9 @@ carousel.addEventListener('animationend', (animation) => {
     b = String(names[1]);
     c = String(names[2]);
     document.querySelector('.slider__item-box-right').innerHTML = '';
+    document.querySelector('.slider__item-box-left').innerHTML = '';
     document.querySelector('.slider__item-box-right').innerHTML = renderItems(a, b, c);
+    document.querySelector('.slider__item-box-left').innerHTML = renderItems(a, b, c);
     addPopupListener();  
   } else {
     carousel.classList.remove('transition-right');
@@ -316,7 +318,9 @@ carousel.addEventListener('animationend', (animation) => {
     b = String(names[1]);
     c = String(names[2]);
     document.querySelector('.slider__item-box-left').innerHTML = '';
+    document.querySelector('.slider__item-box-right').innerHTML = '';
     document.querySelector('.slider__item-box-left').innerHTML = renderItems(a, b, c);
+    document.querySelector('.slider__item-box-right').innerHTML = renderItems(a, b, c);
     addPopupListener();
   }
   
