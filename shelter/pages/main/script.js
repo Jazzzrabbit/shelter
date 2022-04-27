@@ -331,3 +331,7 @@ carousel.addEventListener('animationend', (animation) => {
 document.querySelector('#overlay').addEventListener('mouseover', () => {
   document.querySelector('.popup__close').classList.add('popup__close-hover');
 });
+
+document.querySelector('#overlay').addEventListener('mouseout', () => {
+  document.querySelector('.popup__close').classList.remove('popup__close-hover');
+});
