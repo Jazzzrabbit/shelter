@@ -588,6 +588,18 @@ a {
     cursor: pointer;
 }
 
+.popup__close:hover {
+    background-color: #F1CDB3;
+    opacity: 1;
+    transition: .3s;
+}
+
+.popup__close-hover {
+    background-color: #F1CDB3;
+    opacity: 1;
+    transition: .3s;
+}
+
 .popup__image-item {
     width: 500px;
     max-height: 500px;

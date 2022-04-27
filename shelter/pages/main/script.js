@@ -327,3 +327,7 @@ carousel.addEventListener('animationend', (animation) => {
   leftArrow.addEventListener('click', moveLeft);
   rightArrow.addEventListener('click', moveRight);
 });
+
+document.querySelector('#overlay').addEventListener('mouseover', () => {
+  document.querySelector('.popup__close').classList.add('popup__close-hover');
+});
