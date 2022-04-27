@@ -235,3 +235,7 @@ start.addEventListener('click', () => {
   disableLeftButtons();
   activateRightButtons();
 });
+
+document.querySelector('#overlay').addEventListener('mouseover', () => {
+  document.querySelector('.popup__close').classList.add('popup__close-hover');
+});
